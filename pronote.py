@@ -11,9 +11,9 @@ import json
 #password="pronotevs" # mot de passe pronote - a remplacer par le mot de passe du compte de l'élève
 
 eleve="mathis"
-prefix_url = "0790928e"
-username="MDURAND"
-password="mathis2005"
+prefix_url = "XXXXXXX"
+username="XXXXXXX"
+password="XXXXXXX"
 
 
 index_note=0 
