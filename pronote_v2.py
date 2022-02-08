@@ -1,3 +1,4 @@
+import string
 import pronotepy
 import os
 from datetime import date
@@ -18,7 +19,7 @@ password="mathis2005"
 
 index_note=0 
 limit_note=11 #nombre max de note à afficher + 1 
-longmax_devoir = 125 #nombre de caractère max dans la description des devoirs
+longmax_devoir = 75 #nombre de caractère max dans la description des devoirs
 
 #Connection à Pronote 
 client = pronotepy.Client('https://'+prefix_url+'.index-education.net/pronote/eleve.html?login=true', username, password)
@@ -116,13 +117,12 @@ if client.logged_in:
     homework_today = client.homework(date.today())
     homework_today = sorted(homework_today, key=lambda lesson: lesson.date)
     jsondata['devoir'] = []
-
     #Transformation des devoirs  en Json   
     for homework in homework_today:
         jsondata['devoir'].append({
             'date': homework.date.strftime("%d/%m"),
             'title': homework.subject.name,
-            'description': (homework.description)[0:longmax_devoir],
+            'description': (str(homework.description).replace("-"," ").replace("\n\n"," "))[0:longmax_devoir]+"...",
             'description_longue': (homework.description),
             'done' : homework.done,            
     })

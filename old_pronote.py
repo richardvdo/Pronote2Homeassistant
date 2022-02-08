@@ -1,24 +1,19 @@
 import pronotepy
 import os
 from datetime import date
-from datetime import timedelta
+from datetime import timedelta 
 import json
 
-#Variables a remplacer (ou laisser comme ça pour tester la démo)
-#eleve="demo" #nom de votre enfant - ne sert que pour le nom du fichier json
-#prefix_url = "demo" # sert au prefix de l'url https://PREFIX.index-education.net/pronote/
-#username="demonstration" #utlisateur pronote  - a remplacer par le nom d'utilisateur pronote de l'élève
-#password="pronotevs" # mot de passe pronote - a remplacer par le mot de passe du compte de l'élève
 
-eleve="mathis"
+#Variables
+eleve="Mathis"
 prefix_url = "0790928e"
-username="MDURAND"
-password="mathis2005"
+username="RVANDENOOSTENDE"
+password="Hlvmp!6644"
 
-
-index_note=0 
-limit_note=11 #nombre max de note à afficher + 1 
-longmax_devoir = 125 #nombre de caractère max dans la description des devoirs
+index_note=0
+limit_note=11
+longmax_devoir = 125
 
 #Connection à Pronote 
 client = pronotepy.Client('https://'+prefix_url+'.index-education.net/pronote/eleve.html?login=true', username, password)
@@ -130,8 +125,8 @@ if client.logged_in:
 
 
     #Stockage dans un fichier json : edt + notes + devoirs 
-    location = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
-    with open(os.path.join(location, "www/pronote_"+eleve+".json"), "a") as outfile:
+    __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+    with open(os.path.join(__location__, "../www/pronote_"+eleve+".json"), "a") as outfile:
         outfile.truncate(0)
         json.dump(jsondata, outfile, indent=4)
 
