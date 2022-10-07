@@ -12,14 +12,28 @@ import json
 #password="pronotevs" # mot de passe pronote - a remplacer par le mot de passe du compte de l'élève
 
 eleve="mathis"
-prefix_url = "XXXXXXX"
-username="XXXXXXX"
-password="XXXXXXX"
+prefix_url = "0790928e"
+username="MDURAND"
+password="mathis2005"
 
 
 index_note=0 
 limit_note=11 #nombre max de note à afficher + 1 
 longmax_devoir = 75 #nombre de caractère max dans la description des devoirs
+
+def cleanDesc(description):
+    description.replace("-"," ").replace("\n\n"," ").replace("\r\n"," ").replace("\r\n\r\n"," ").replace("\u00b0"," ").replace("\u00c9"," ").replace("\u00e0"," ").replace("\u2019"," ").replace("\u2013"," ").replace("\u00e9"," ")
+    x = "éèêëÉÈÀ"
+    y = "eeeeEEA"
+    mytable = description.maketrans(x, y)
+    description2 = str(description).translate(mytable)
+    s = "ü():;!§*µ$£°"
+    t = "            "
+    mytable2 = description2.maketrans(s, t)
+    description3 = str(description2).translate(mytable2)
+    description4 = (str(description3))[0:longmax_devoir]+"..."
+    return description4
+
 
 #Connection à Pronote 
 client = pronotepy.Client('https://'+prefix_url+'.index-education.net/pronote/eleve.html?login=true', username, password)
@@ -38,7 +52,7 @@ if client.logged_in:
 
     #Récupération  emploi du prochain jour d'école (ça sert le weekend et les vacances)
     lessons_nextday = client.lessons(date.today()+ timedelta(days = delta))
-    while not lessons_nextday:
+    while not lessons_nextday and delta < 3:
         lessons_nextday = client.lessons(date.today()+ timedelta(days = delta))
         delta = delta + 1 
     lessons_nextday = sorted(lessons_nextday, key=lambda lesson: lesson.start)
@@ -113,17 +127,20 @@ if client.logged_in:
 
     })
 
+
+
     #Récupération des devoirs
     homework_today = client.homework(date.today())
     homework_today = sorted(homework_today, key=lambda lesson: lesson.date)
     jsondata['devoir'] = []
     #Transformation des devoirs  en Json   
     for homework in homework_today:
+        description_courte = cleanDesc(homework.description)
         jsondata['devoir'].append({
             'date': homework.date.strftime("%d/%m"),
             'title': homework.subject.name,
-            'description': (str(homework.description).replace("-"," ").replace("\n\n"," "))[0:longmax_devoir]+"...",
-            'description_longue': (homework.description),
+            'description': description_courte,
+            'description_longue': homework.description,
             'done' : homework.done,            
     })
 
