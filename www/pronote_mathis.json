@@ -1,0 +1,259 @@
+{
+    "edt_aujourdhui": [
+        {
+            "id": "315CE364A6E607",
+            "date_heure": "07/10/2022, 08:05",
+            "date": "07/10/2022",
+            "heure": "08:05",
+            "heure_fin": "09:00",
+            "cours": "ULIS TSA",
+            "salle": "B10 ULIS",
+            "annulation": false,
+            "status": null,
+            "background_color": "#FF0000"
+        },
+        {
+            "id": "310ACF60A6E68D",
+            "date_heure": "07/10/2022, 09:00",
+            "date": "07/10/2022",
+            "heure": "09:00",
+            "heure_fin": "09:55",
+            "cours": "VIE DE CLASSE",
+            "salle": "A101",
+            "annulation": true,
+            "status": "Prof. absent",
+            "background_color": "#8080C0"
+        },
+        {
+            "id": "31930358A6E62B",
+            "date_heure": "07/10/2022, 10:10",
+            "date": "07/10/2022",
+            "heure": "10:10",
+            "heure_fin": "11:05",
+            "cours": "MATHEMATIQUES",
+            "salle": "F106",
+            "annulation": false,
+            "status": "Cours d\u00e9plac\u00e9",
+            "background_color": "#8000FF"
+        },
+        {
+            "id": "31162260A6E6C8",
+            "date_heure": "07/10/2022, 10:10",
+            "date": "07/10/2022",
+            "heure": "10:10",
+            "heure_fin": "11:05",
+            "cours": "AP LETTRES",
+            "salle": "F105",
+            "annulation": true,
+            "status": "Prof. absent",
+            "background_color": "#6ACAF2"
+        },
+        {
+            "id": "31C3B66FA6E63E",
+            "date_heure": "07/10/2022, 11:05",
+            "date": "07/10/2022",
+            "heure": "11:05",
+            "heure_fin": "12:00",
+            "cours": "CO INTERV FR/PRO",
+            "salle": "F105",
+            "annulation": true,
+            "status": "Prof. absent",
+            "background_color": "#4576BA"
+        },
+        {
+            "id": "31102658A6E664",
+            "date_heure": "07/10/2022, 11:05",
+            "date": "07/10/2022",
+            "heure": "11:05",
+            "heure_fin": "12:00",
+            "cours": "CO INTERV FR/PRO",
+            "salle": "B02 LABO LV  (24 ordis)",
+            "annulation": false,
+            "status": "Cours modifi\u00e9",
+            "background_color": "#4576BA"
+        },
+        {
+            "id": "318A2A60A6E681",
+            "date_heure": "07/10/2022, 13:25",
+            "date": "07/10/2022",
+            "heure": "13:25",
+            "heure_fin": "14:20",
+            "cours": "DOMAINE PROFESSIONNEL",
+            "salle": "G01 LOG, G02 LOG INFO  (18 ordis)",
+            "annulation": true,
+            "status": "Prof. absent",
+            "background_color": "#CE8031"
+        },
+        {
+            "id": "315B2960A6E62D",
+            "date_heure": "07/10/2022, 14:20",
+            "date": "07/10/2022",
+            "heure": "14:20",
+            "heure_fin": "15:15",
+            "cours": "DOMAINE PROFESSIONNEL",
+            "salle": "G01 LOG, G02 LOG INFO  (18 ordis)",
+            "annulation": true,
+            "status": "Prof. absent",
+            "background_color": "#CE8031"
+        },
+        {
+            "id": "31D6A460A6E66B",
+            "date_heure": "07/10/2022, 15:15",
+            "date": "07/10/2022",
+            "heure": "15:15",
+            "heure_fin": "16:30",
+            "cours": "MATHEMATIQUES",
+            "salle": "F106",
+            "annulation": true,
+            "status": "Cours annul\u00e9",
+            "background_color": "#8000FF"
+        }
+    ],
+    "edt_demain": [],
+    "edt_prochainjour": [],
+    "note": [
+        {
+            "date": "06/10/2022",
+            "date_courte": "06/10",
+            "cours": "DOMAINE PROFESSIONNEL",
+            "note": "18",
+            "sur": "20",
+            "note_sur": "18\u00a0/\u00a020",
+            "coeff": "4",
+            "moyenne_classe": "14,81",
+            "max": "18",
+            "min": "10"
+        },
+        {
+            "date": "05/10/2022",
+            "date_courte": "05/10",
+            "cours": "MATHEMATIQUES",
+            "note": "7,5",
+            "sur": "20",
+            "note_sur": "7,5\u00a0/\u00a020",
+            "coeff": "1",
+            "moyenne_classe": "9,46",
+            "max": "17,5",
+            "min": "2"
+        },
+        {
+            "date": "28/09/2022",
+            "date_courte": "28/09",
+            "cours": "CONDUITE DE CHARIOTS",
+            "note": "15",
+            "sur": "20",
+            "note_sur": "15\u00a0/\u00a020",
+            "coeff": "1",
+            "moyenne_classe": "15,75",
+            "max": "20",
+            "min": "12"
+        },
+        {
+            "date": "27/09/2022",
+            "date_courte": "27/09",
+            "cours": "ESPAGNOL LV2",
+            "note": "Absent",
+            "sur": "10",
+            "note_sur": "Absent\u00a0/\u00a010",
+            "coeff": "1",
+            "moyenne_classe": "4,31",
+            "max": "8",
+            "min": "0"
+        },
+        {
+            "date": "27/09/2022",
+            "date_courte": "27/09",
+            "cours": "P. S. E.",
+            "note": "8",
+            "sur": "10",
+            "note_sur": "8\u00a0/\u00a010",
+            "coeff": "0.25",
+            "moyenne_classe": "7,54",
+            "max": "9",
+            "min": "6"
+        },
+        {
+            "date": "21/09/2022",
+            "date_courte": "21/09",
+            "cours": "ECONOMIE-DROIT",
+            "note": "18",
+            "sur": "20",
+            "note_sur": "18\u00a0/\u00a020",
+            "coeff": "2",
+            "moyenne_classe": "13,46",
+            "max": "18",
+            "min": "10"
+        },
+        {
+            "date": "21/09/2022",
+            "date_courte": "21/09",
+            "cours": "DOMAINE PROFESSIONNEL",
+            "note": "Absent",
+            "sur": "20",
+            "note_sur": "Absent\u00a0/\u00a020",
+            "coeff": "4",
+            "moyenne_classe": "15,09",
+            "max": "20",
+            "min": "5"
+        },
+        {
+            "date": "19/09/2022",
+            "date_courte": "19/09",
+            "cours": "ECONOMIE-DROIT",
+            "note": "Absent",
+            "sur": "20",
+            "note_sur": "Absent\u00a0/\u00a020",
+            "coeff": "1",
+            "moyenne_classe": "18,58",
+            "max": "20",
+            "min": "10"
+        },
+        {
+            "date": "15/09/2022",
+            "date_courte": "15/09",
+            "cours": "DOMAINE PROFESSIONNEL",
+            "note": "13",
+            "sur": "20",
+            "note_sur": "13\u00a0/\u00a020",
+            "coeff": "1",
+            "moyenne_classe": "18,69",
+            "max": "20",
+            "min": "13"
+        },
+        {
+            "date": "15/09/2022",
+            "date_courte": "15/09",
+            "cours": "DOMAINE PROFESSIONNEL",
+            "note": "Absent",
+            "sur": "20",
+            "note_sur": "Absent\u00a0/\u00a020",
+            "coeff": "2",
+            "moyenne_classe": "11,71",
+            "max": "19,5",
+            "min": "4"
+        }
+    ],
+    "devoir": [
+        {
+            "date": "11/10",
+            "title": "FRANCAIS",
+            "description": "Repondre aux questions sur votre cahier \r\n\r\nQuestion 2   Le Mal   Presentez...",
+            "description_longue": "R\u00e9pondre aux questions sur votre cahier \r\n\r\nQuestion 2 : Le Mal : Pr\u00e9sentez la structure du po\u00e8me (architecture + musique du po\u00e8me) \r\nQuestion 3 : Le Mal : \u00e0 travers quels mots et quelle ponctuation la r\u00e9volte de l\u2019adolescent s\u2019exprime \u2013t-elle ? ( = les ressources du langage) \r\nQuestion 4 : Le Dormeur du Val :  Sur quoi repose l\u2019effet de surprise du po\u00e8me ? \r\nQuestion 5 : Pr\u00e9sentez la structure du po\u00e8me (architecture + musique du po\u00e8me) \r\nQuestion 6 : Etudiez la progressivit\u00e9 th\u00e9matiques des strophes ( = Quel est le sch\u00e9ma de \r\ndescription du po\u00e8me strophe par strophe ? )",
+            "done": true
+        },
+        {
+            "date": "11/10",
+            "title": "HIST.GEO.EMC",
+            "description": "Relire le cours pour les deux evaluations.  Etude de documents et connaissa...",
+            "description_longue": "Relire le cours pour les deux \u00e9valuations. (\u00c9tude de documents et connaissances)",
+            "done": true
+        },
+        {
+            "date": "12/10",
+            "title": "MATHEMATIQUES",
+            "description": "Exercice n 6 p15  sauf la question 5 ...",
+            "description_longue": "Exercice n\u00b06 p15 (sauf la question 5)",
+            "done": false
+        }
+    ]
+}

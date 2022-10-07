@@ -11,9 +11,9 @@ import json
 #password="pronotevs" # mot de passe pronote - a remplacer par le mot de passe du compte de l'élève
 
 eleve="mathis"
-prefix_url = "XXXXXXX"
-username="XXXXXXX"
-password="XXXXXXX"
+prefix_url = "0790928e"
+username="MDURAND"
+password="mathis2005"
 
 
 index_note=0 
@@ -38,8 +38,9 @@ if client.logged_in:
     #Récupération  emploi du prochain jour d'école (ça sert le weekend et les vacances)
     lessons_nextday = client.lessons(date.today()+ timedelta(days = delta))
     while not lessons_nextday:
-        lessons_nextday = client.lessons(date.today()+ timedelta(days = delta))
-        delta = delta + 1 
+        if lessons_nextday != []:
+            lessons_nextday = client.lessons(date.today()+ timedelta(days = delta))
+            delta = delta + 1 
     lessons_nextday = sorted(lessons_nextday, key=lambda lesson: lesson.start)
 
     #Transformation Json des emplois du temps (J,J+1 et next)
