@@ -22,17 +22,20 @@ limit_note=11 #nombre max de note à afficher + 1
 longmax_devoir = 75 #nombre de caractère max dans la description des devoirs
 
 def cleanDesc(description):
-    description.replace("-"," ").replace("\n\n"," ").replace("\r\n"," ").replace("\r\n\r\n"," ").replace("\u00b0"," ").replace("\u00c9"," ").replace("\u00e0"," ").replace("\u2019"," ").replace("\u2013"," ").replace("\u00e9"," ")
+    description1 = description.replace("-"," ").replace("\n"," ").replace("\r"," ").replace("\n\n"," ").replace("\r\n\r\n"," ").replace("\u00b0"," ").replace("\u00c9"," ").replace("\u00e0"," ").replace("\u2019"," ").replace("\u2013"," ").replace("\r\n"," ").replace("\u00e9"," ")
     x = "éèêëÉÈÀ"
     y = "eeeeEEA"
-    mytable = description.maketrans(x, y)
-    description2 = str(description).translate(mytable)
+    mytable = description1.maketrans(x, y)
+    description2 = str(description1).translate(mytable)
     s = "ü():;!§*µ$£°"
     t = "            "
     mytable2 = description2.maketrans(s, t)
     description3 = str(description2).translate(mytable2)
     description4 = (str(description3))[0:longmax_devoir]+"..."
-    return description4
+    description5 = description4.replace("\n"," ")
+    description6 = description5.replace("\n"," ")
+    description7 = description6.replace("\r\n\r\n"," ")
+    return description7
 
 
 #Connection à Pronote 
@@ -52,7 +55,7 @@ if client.logged_in:
 
     #Récupération  emploi du prochain jour d'école (ça sert le weekend et les vacances)
     lessons_nextday = client.lessons(date.today()+ timedelta(days = delta))
-    while not lessons_nextday and delta < 3:
+    while not lessons_nextday and delta < 2:
         lessons_nextday = client.lessons(date.today()+ timedelta(days = delta))
         delta = delta + 1 
     lessons_nextday = sorted(lessons_nextday, key=lambda lesson: lesson.start)
