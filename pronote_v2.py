@@ -35,12 +35,14 @@ def cleanDesc(description):
     description5 = description4.replace("\n"," ")
     description6 = description5.replace("\n"," ")
     description7 = description6.replace("\r\n\r\n"," ")
+
     return description7
 
 
 #Connection à Pronote 
 client = pronotepy.Client('https://'+prefix_url+'.index-education.net/pronote/eleve.html?login=true', username, password)
-
+#print(string(client))
+#print(json.dumps(client))
 #Si on est bien connecté
 if client.logged_in:
     
@@ -49,13 +51,16 @@ if client.logged_in:
     lessons_today = sorted(lessons_today, key=lambda lesson: lesson.start)
 
     #Récupération  emploi du lendemain
+    #lessons_tomorrow = client.lessons(date.today())
     lessons_tomorrow = client.lessons(date.today()+ timedelta(days = 1))
     lessons_tomorrow = sorted(lessons_tomorrow, key=lambda lesson: lesson.start)
     delta = 1
 
     #Récupération  emploi du prochain jour d'école (ça sert le weekend et les vacances)
+    #lessons_nextday = client.lessons(date.today())
     lessons_nextday = client.lessons(date.today()+ timedelta(days = delta))
-    while not lessons_nextday and delta < 2:
+    while not lessons_nextday and delta<1:
+        #lessons_nextday = client.lessons(date.today())
         lessons_nextday = client.lessons(date.today()+ timedelta(days = delta))
         delta = delta + 1 
     lessons_nextday = sorted(lessons_nextday, key=lambda lesson: lesson.start)
@@ -138,6 +143,7 @@ if client.logged_in:
     jsondata['devoir'] = []
     #Transformation des devoirs  en Json   
     for homework in homework_today:
+        #description_courte = homework.description.encode('ascii','ignore')
         description_courte = cleanDesc(homework.description)
         jsondata['devoir'].append({
             'date': homework.date.strftime("%d/%m"),
